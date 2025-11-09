@@ -40,7 +40,7 @@ export function Sidebar() {
       >
         {/* Logo */}
         <div className="p-6 border-b border-neutral-800">
-          <h1 className="text-2xl font-bold text-primary">MoneySync</h1>
+          <h1 className="text-2xl font-bold text-primary">ExpenseSplitter</h1>
         </div>
 
         {/* Navigation */}

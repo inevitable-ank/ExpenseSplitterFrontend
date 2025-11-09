@@ -89,7 +89,7 @@ export default function SignupPage() {
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-primary">MoneySync</h1>
+          <h1 className="text-3xl font-bold text-primary">ExpenseSplitter</h1>
           <p className="text-neutral-600 mt-2">Create your account</p>
         </div>
 

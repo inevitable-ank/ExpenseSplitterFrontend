@@ -8,7 +8,7 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-br from-neutral-50 to-neutral-100">
       {/* Navigation */}
       <nav className="flex items-center justify-between px-6 lg:px-12 py-6 bg-white/80 backdrop-blur border-b border-border">
-        <div className="text-2xl font-bold text-primary">MoneySync</div>
+        <div className="text-2xl font-bold text-primary">ExpenseSplitter</div>
         <div className="hidden md:flex gap-8 items-center">
           <a href="#features" className="text-neutral-600 hover:text-primary transition-colors">
             Features
@@ -32,7 +32,7 @@ export default function Home() {
             Split Expenses with Friends, <span className="text-primary">Effortlessly</span>
           </h1>
           <p className="text-xl text-neutral-600 mb-8 max-w-2xl mx-auto text-balance">
-            Stop calculating who owes whom. MoneySync automatically tracks shared expenses and debts, making group
+            Stop calculating who owes whom. ExpenseSplitter automatically tracks shared expenses and debts, making group
             finances simple and transparent.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -115,7 +115,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to simplify group finances?</h2>
           <p className="text-lg mb-8 opacity-90">
-            Join thousands of users who trust MoneySync to manage their shared expenses.
+            Join thousands of users who trust ExpenseSplitter to manage their shared expenses.
           </p>
           <Link
             href="/auth/signup"
@@ -129,7 +129,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="px-6 lg:px-12 py-12 bg-neutral-900 text-neutral-400">
         <div className="max-w-6xl mx-auto text-center">
-          <p>Copyright 2025 MoneySync. All rights reserved.</p>
+          <p>Copyright 2025 ExpenseSplitter. All rights reserved.</p>
         </div>
       </footer>
     </main>

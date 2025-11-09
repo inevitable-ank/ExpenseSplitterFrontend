@@ -72,7 +72,7 @@ export default function SettingsPage() {
             { label: "Email notifications for expenses", desc: "Get notified when expenses are added" },
             { label: "Debt reminders", desc: "Receive reminders for pending debts" },
             { label: "Weekly summary", desc: "Get a weekly summary of your finances" },
-            { label: "Marketing emails", desc: "Receive tips and updates about MoneySync" },
+            { label: "Marketing emails", desc: "Receive tips and updates about ExpenseSplitter" },
           ].map((item, i) => (
             <label
               key={i}
