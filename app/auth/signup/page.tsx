@@ -85,22 +85,22 @@ export default function SignupPage() {
   }
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-neutral-50 to-neutral-100 px-4 py-8">
-      <div className="w-full max-w-md">
+    <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-neutral-50 to-neutral-100 px-4 py-4">
+      <div className="w-full max-w-2xl">
         {/* Logo */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-primary">ExpenseSplitter</h1>
-          <p className="text-neutral-600 mt-2">Create your account</p>
+        <div className="text-center mb-4">
+          <h1 className="text-2xl font-bold text-primary">ExpenseSplitter</h1>
+          <p className="text-neutral-600 mt-1 text-sm">Create your account</p>
         </div>
 
         {/* Signup Card */}
         <Card className="border-0 shadow-lg">
-          <CardHeader>
-            <h2 className="text-2xl font-bold">Sign Up</h2>
-            <p className="text-neutral-600 text-sm mt-2">Join us to start managing group expenses</p>
+          <CardHeader className="pb-3">
+            <h2 className="text-xl font-bold">Sign Up</h2>
+            <p className="text-neutral-600 text-sm mt-1">Join us to start managing group expenses</p>
           </CardHeader>
           <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-3">
               {error && (
                 <div className="p-4 bg-error/10 border border-error/30 rounded-lg text-error text-sm">{error}</div>
               )}
@@ -108,7 +108,7 @@ export default function SignupPage() {
               {/* Name Fields */}
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-sm font-medium mb-2">First Name</label>
+                  <label className="block text-sm font-medium mb-1.5">First Name</label>
                   <div className="relative">
                     <User className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none" size={20} />
                     <input
@@ -123,7 +123,7 @@ export default function SignupPage() {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Last Name</label>
+                  <label className="block text-sm font-medium mb-1.5">Last Name</label>
                   <div className="relative">
                     <User className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none" size={20} />
                     <input
@@ -141,7 +141,7 @@ export default function SignupPage() {
 
               {/* Email Field */}
               <div>
-                <label className="block text-sm font-medium mb-2">Email</label>
+                <label className="block text-sm font-medium mb-1.5">Email</label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none" size={20} />
                   <input
@@ -158,7 +158,7 @@ export default function SignupPage() {
 
               {/* Password Field */}
               <div>
-                <label className="block text-sm font-medium mb-2">Password</label>
+                <label className="block text-sm font-medium mb-1.5">Password</label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none" size={20} />
                   <input
@@ -179,46 +179,46 @@ export default function SignupPage() {
                   </button>
                 </div>
 
-                {/* Password Strength Indicator */}
-                <div className="mt-3 space-y-2">
-                  <div className="flex items-center gap-2 text-sm">
+                {/* Password Strength Indicator - Compact Grid */}
+                <div className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1.5">
+                  <div className="flex items-center gap-1.5 text-xs">
                     {passwordStrength.hasLength ? (
-                      <Check className="text-success" size={16} />
+                      <Check className="text-success" size={14} />
                     ) : (
-                      <X className="text-error" size={16} />
+                      <X className="text-error" size={14} />
                     )}
-                    <span>At least 8 characters</span>
+                    <span>8+ characters</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
+                  <div className="flex items-center gap-1.5 text-xs">
                     {passwordStrength.hasUppercase ? (
-                      <Check className="text-success" size={16} />
+                      <Check className="text-success" size={14} />
                     ) : (
-                      <X className="text-error" size={16} />
+                      <X className="text-error" size={14} />
                     )}
-                    <span>One uppercase letter</span>
+                    <span>Uppercase</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
+                  <div className="flex items-center gap-1.5 text-xs">
                     {passwordStrength.hasLowercase ? (
-                      <Check className="text-success" size={16} />
+                      <Check className="text-success" size={14} />
                     ) : (
-                      <X className="text-error" size={16} />
+                      <X className="text-error" size={14} />
                     )}
-                    <span>One lowercase letter</span>
+                    <span>Lowercase</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm">
+                  <div className="flex items-center gap-1.5 text-xs">
                     {passwordStrength.hasNumber ? (
-                      <Check className="text-success" size={16} />
+                      <Check className="text-success" size={14} />
                     ) : (
-                      <X className="text-error" size={16} />
+                      <X className="text-error" size={14} />
                     )}
-                    <span>One number</span>
+                    <span>Number</span>
                   </div>
                 </div>
               </div>
 
               {/* Confirm Password Field */}
               <div>
-                <label className="block text-sm font-medium mb-2">Confirm Password</label>
+                <label className="block text-sm font-medium mb-1.5">Confirm Password</label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none" size={20} />
                   <input
@@ -244,8 +244,8 @@ export default function SignupPage() {
 
               {/* Terms */}
               <div className="flex items-start gap-2">
-                <input type="checkbox" id="terms" className="mt-1" required />
-                <label htmlFor="terms" className="text-sm text-neutral-600">
+                <input type="checkbox" id="terms" className="mt-0.5" required />
+                <label htmlFor="terms" className="text-xs text-neutral-600 leading-tight">
                   I agree to the Terms of Service and Privacy Policy
                 </label>
               </div>
@@ -256,7 +256,7 @@ export default function SignupPage() {
               </Button>
 
               {/* Divider */}
-              <div className="relative my-6">
+              <div className="relative my-4">
                 <div className="absolute inset-0 flex items-center">
                   <div className="w-full border-t border-border"></div>
                 </div>
@@ -293,7 +293,7 @@ export default function SignupPage() {
             </form>
 
             {/* Sign In Link */}
-            <p className="text-center text-sm text-neutral-600 mt-6">
+            <p className="text-center text-sm text-neutral-600 mt-4">
               Already have an account?{" "}
               <Link href="/auth/login" className="text-primary font-semibold hover:underline">
                 Sign in
