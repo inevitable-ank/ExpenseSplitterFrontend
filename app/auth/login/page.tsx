@@ -50,13 +50,13 @@ export default function LoginPage() {
               <div>
                 <label className="block text-sm font-medium mb-2">Email</label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-3 text-neutral-400" size={20} />
+                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none" size={20} />
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@example.com"
-                    className="input-field pl-10"
+                    className="input-field !pl-[44px]"
                     required
                   />
                 </div>
@@ -66,19 +66,19 @@ export default function LoginPage() {
               <div>
                 <label className="block text-sm font-medium mb-2">Password</label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-3 text-neutral-400" size={20} />
+                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none" size={20} />
                   <input
                     type={showPassword ? "text" : "password"}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="••••••••"
-                    className="input-field pl-10 pr-10"
+                    className="input-field !pl-[44px] !pr-[44px]"
                     required
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-3 text-neutral-400 hover:text-primary"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-primary"
                   >
                     {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                   </button>
