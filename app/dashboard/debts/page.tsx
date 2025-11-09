@@ -93,7 +93,7 @@ export default function DebtsPage() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-neutral-600 text-sm font-medium">Total Owed to You</p>
-                <p className="text-3xl font-bold mt-2 text-success">${totalOwed}</p>
+                <p className="text-3xl font-bold mt-2 text-success">Rs. {totalOwed}</p>
                 <p className="text-success text-sm mt-2">{debts.filter((d) => d.type === "owed").length} people</p>
               </div>
               <div className="w-14 h-14 bg-success/20 rounded-lg flex items-center justify-center">
@@ -109,7 +109,7 @@ export default function DebtsPage() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-neutral-600 text-sm font-medium">Total You Owe</p>
-                <p className="text-3xl font-bold mt-2 text-warning">${totalOwes}</p>
+                <p className="text-3xl font-bold mt-2 text-warning">Rs. {totalOwes}</p>
                 <p className="text-warning text-sm mt-2">{debts.filter((d) => d.type === "owes").length} people</p>
               </div>
               <div className="w-14 h-14 bg-warning/20 rounded-lg flex items-center justify-center">
@@ -128,7 +128,7 @@ export default function DebtsPage() {
               <div>
                 <p className="text-neutral-600 text-sm font-medium">Net Balance</p>
                 <p className={`text-3xl font-bold mt-2 ${netBalance >= 0 ? "text-success" : "text-error"}`}>
-                  {netBalance >= 0 ? "+" : ""}${netBalance}
+                  {netBalance >= 0 ? "+" : ""}Rs. {netBalance}
                 </p>
                 <p className={`text-sm mt-2 ${netBalance >= 0 ? "text-success" : "text-error"}`}>
                   {netBalance >= 0 ? "People owe you" : "You owe overall"}
@@ -220,7 +220,7 @@ export default function DebtsPage() {
                 <div className="flex items-center gap-6">
                   <div className="text-right">
                     <p className={`font-semibold ${debt.type === "owed" ? "text-success" : "text-warning"}`}>
-                      {debt.type === "owed" ? "+" : "-"}${debt.amount}
+                      {debt.type === "owed" ? "+" : "-"}Rs. {debt.amount}
                     </p>
                     <p className="text-xs text-neutral-600">{debt.lastUpdated}</p>
                   </div>
@@ -277,7 +277,7 @@ export default function DebtsPage() {
               <div>
                 <p className="text-sm text-neutral-600 mb-2">Amount</p>
                 <div className="relative">
-                  <span className="absolute left-3 top-3 text-neutral-500 text-lg">$</span>
+                  <span className="absolute left-3 top-3 text-neutral-500 text-lg">Rs.</span>
                   <input
                     type="number"
                     value={selectedDebt.amount}

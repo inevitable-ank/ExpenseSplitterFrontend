@@ -43,7 +43,7 @@ export default function Dashboard() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-neutral-600 text-sm font-medium">Total Balance</p>
-                <p className="text-3xl font-bold mt-2">$3,240</p>
+                <p className="text-3xl font-bold mt-2">Rs. 3,240</p>
                 <p className="text-success text-sm mt-2 flex items-center gap-1">
                   <TrendingUp size={16} /> +12% from last month
                 </p>
@@ -77,7 +77,7 @@ export default function Dashboard() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-neutral-600 text-sm font-medium">You Owe</p>
-                <p className="text-3xl font-bold mt-2 text-warning">$450</p>
+                <p className="text-3xl font-bold mt-2 text-warning">Rs. 450</p>
                 <p className="text-neutral-600 text-sm mt-2">To 3 people</p>
               </div>
               <div className="w-14 h-14 bg-warning/20 rounded-lg flex items-center justify-center">
@@ -147,9 +147,9 @@ export default function Dashboard() {
         <CardContent>
           <div className="space-y-4">
             {[
-              { name: "Dinner with friends", amount: "-$45.50", category: "Food", date: "Today" },
-              { name: "Grocery split", amount: "-$32.00", category: "Food", date: "Yesterday" },
-              { name: "Uber ride share", amount: "-$12.50", category: "Transport", date: "2 days ago" },
+              { name: "Dinner with friends", amount: "-Rs. 45.50", category: "Food", date: "Today" },
+              { name: "Grocery split", amount: "-Rs. 32.00", category: "Food", date: "Yesterday" },
+              { name: "Uber ride share", amount: "-Rs. 12.50", category: "Transport", date: "2 days ago" },
             ].map((tx, i) => (
               <div key={i} className="flex items-center justify-between py-3 border-b border-border last:border-0">
                 <div>

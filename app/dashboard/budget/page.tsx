@@ -94,7 +94,7 @@ export default function BudgetPage() {
           <CardContent className="p-6">
             <div>
               <p className="text-neutral-600 text-sm font-medium">Total Income</p>
-              <p className="text-2xl font-bold mt-2 text-success">${totalIncome}</p>
+              <p className="text-2xl font-bold mt-2 text-success">Rs. {totalIncome}</p>
               <p className="text-success text-xs mt-2">This month</p>
             </div>
           </CardContent>
@@ -105,7 +105,7 @@ export default function BudgetPage() {
           <CardContent className="p-6">
             <div>
               <p className="text-neutral-600 text-sm font-medium">Total Expenses</p>
-              <p className="text-2xl font-bold mt-2 text-warning">${totalSpent}</p>
+              <p className="text-2xl font-bold mt-2 text-warning">Rs. {totalSpent}</p>
               <p className="text-warning text-xs mt-2">{Math.round((totalSpent / totalIncome) * 100)}% of income</p>
             </div>
           </CardContent>
@@ -116,7 +116,7 @@ export default function BudgetPage() {
           <CardContent className="p-6">
             <div>
               <p className="text-neutral-600 text-sm font-medium">Remaining</p>
-              <p className="text-2xl font-bold mt-2 text-primary">${remaining}</p>
+              <p className="text-2xl font-bold mt-2 text-primary">Rs. {remaining}</p>
               <p className="text-primary text-xs mt-2">Available to spend</p>
             </div>
           </CardContent>
@@ -207,7 +207,7 @@ export default function BudgetPage() {
                       <div>
                         <p className="font-medium">{budget.category}</p>
                         <p className="text-sm text-neutral-600">
-                          ${budget.spent} / ${budget.limit}
+                          Rs. {budget.spent} / Rs. {budget.limit}
                         </p>
                       </div>
                     </div>
@@ -234,7 +234,7 @@ export default function BudgetPage() {
                   {isOverBudget && (
                     <div className="flex items-center gap-2 mt-2 text-error text-sm">
                       <AlertCircle size={14} />
-                      <span>Over budget by ${(budget.spent - budget.limit).toFixed(2)}</span>
+                      <span>Over budget by Rs. {(budget.spent - budget.limit).toFixed(2)}</span>
                     </div>
                   )}
                 </div>
@@ -269,7 +269,7 @@ export default function BudgetPage() {
               <div>
                 <label className="block text-sm font-medium mb-2">Monthly Limit</label>
                 <div className="relative">
-                  <span className="absolute left-3 top-3 text-neutral-500">$</span>
+                  <span className="absolute left-3 top-3 text-neutral-500">Rs.</span>
                   <input type="number" placeholder="500" className="input-field pl-8" />
                 </div>
               </div>
@@ -301,7 +301,7 @@ export default function BudgetPage() {
               <div>
                 <label className="block text-sm font-medium mb-2">Amount</label>
                 <div className="relative">
-                  <span className="absolute left-3 top-3 text-neutral-500">$</span>
+                  <span className="absolute left-3 top-3 text-neutral-500">Rs.</span>
                   <input type="number" placeholder="0.00" className="input-field pl-8" />
                 </div>
               </div>

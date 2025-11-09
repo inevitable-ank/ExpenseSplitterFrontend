@@ -52,7 +52,7 @@ export default function GroupDetailsPage({ params }: { params: { id: string } })
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-neutral-600 text-sm font-medium">Total Spent</p>
-                <p className="text-3xl font-bold mt-2">$2,240</p>
+                <p className="text-3xl font-bold mt-2">Rs. 2,240</p>
               </div>
               <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center">
                 <DollarSign className="text-primary" size={28} />
@@ -80,7 +80,7 @@ export default function GroupDetailsPage({ params }: { params: { id: string } })
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-neutral-600 text-sm font-medium">You Owe</p>
-                <p className="text-3xl font-bold mt-2 text-warning">$130</p>
+                <p className="text-3xl font-bold mt-2 text-warning">Rs. 130</p>
               </div>
               <div className="w-14 h-14 bg-warning/10 rounded-lg flex items-center justify-center">
                 <TrendingDown className="text-warning" size={28} />
@@ -155,7 +155,7 @@ export default function GroupDetailsPage({ params }: { params: { id: string } })
                 <div className="flex items-center gap-4">
                   <div className="text-right">
                     <p className={`font-semibold ${member.color === "warning" ? "text-warning" : "text-success"}`}>
-                      {member.status === "owed" ? "-" : "+"}${member.balance}
+                      {member.status === "owed" ? "-" : "+"}Rs. {member.balance}
                     </p>
                     <p className="text-xs text-neutral-600">{member.status === "owed" ? "You owe" : "Owes you"}</p>
                   </div>
@@ -180,9 +180,9 @@ export default function GroupDetailsPage({ params }: { params: { id: string } })
         <CardContent>
           <div className="space-y-4">
             {[
-              { description: "Restaurant dinner", amount: "$240", paidBy: "John", splitWith: "4 people" },
-              { description: "Hotel accommodation", amount: "$400", paidBy: "Sarah", splitWith: "4 people" },
-              { description: "Taxi ride", amount: "$45", paidBy: "Mike", splitWith: "2 people" },
+              { description: "Restaurant dinner", amount: "Rs. 240", paidBy: "John", splitWith: "4 people" },
+              { description: "Hotel accommodation", amount: "Rs. 400", paidBy: "Sarah", splitWith: "4 people" },
+              { description: "Taxi ride", amount: "Rs. 45", paidBy: "Mike", splitWith: "2 people" },
             ].map((tx, i) => (
               <div key={i} className="flex items-center justify-between py-3 border-b border-border last:border-0">
                 <div>

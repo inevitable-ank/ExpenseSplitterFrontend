@@ -175,7 +175,7 @@ export default function TransactionsPage() {
                   <td className="px-6 py-4 hidden sm:table-cell">
                     <p className="text-sm text-neutral-600">{tx.date}</p>
                   </td>
-                  <td className="px-6 py-4 text-right font-semibold">${tx.amount.toFixed(2)}</td>
+                  <td className="px-6 py-4 text-right font-semibold">Rs. {tx.amount.toFixed(2)}</td>
                   <td className="px-6 py-4 text-center">
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -230,7 +230,7 @@ export default function TransactionsPage() {
                   <div>
                     <label className="block text-sm font-medium mb-2">Amount</label>
                     <div className="relative">
-                      <span className="absolute left-3 top-3 text-neutral-500">$</span>
+                      <span className="absolute left-3 top-3 text-neutral-500">Rs.</span>
                       <input
                         type="number"
                         step="0.01"
